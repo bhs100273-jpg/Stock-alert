@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>주식 ±3% 알림</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f6f8;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif;color:#222}.app{max-width:520px;margin:auto;background:#fff;min-height:100vh}
+header{padding:18px 15px 12px;position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;z-index:2}h1{margin:0;font-size:23px}.sub{font-size:11px;color:#888;margin-top:6px}.status{margin:10px 12px;padding:10px;border-radius:9px;background:#f0f8f3;color:#287c4d;font-size:11px}.status.bad{background:#fff0f0;color:#b23b43}
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;padding:9px 12px;background:#f5f6f8}.box{background:#fff;border:1px solid #eee;border-radius:11px;text-align:center;padding:9px}.box span{font-size:10px;color:#999}.box b{display:block;font-size:18px;margin-top:2px}.red{color:#d44f5b}.blue{color:#3676b9}
+.row{display:grid;grid-template-columns:1fr auto;padding:14px 15px;border-bottom:1px solid #eee}.up{background:#fff3f4}.down{background:#f1f7fd}.name{font-weight:800;font-size:16px}.sym{font-size:10px;color:#aaa;margin-top:3px}.price{text-align:right;font-weight:800}.change{text-align:right;font-weight:800;font-size:14px;margin-top:3px}.prev{text-align:right;color:#aaa;font-size:10px;margin-top:2px}.badge{display:inline-block;margin-top:7px;padding:4px 7px;border-radius:6px;background:#eee;color:#777;font-size:10px}.badge.r{background:#ffe5e8;color:#c4414e}.badge.b{background:#e7f0fb;color:#326da6}.time{text-align:right;padding:8px 15px;color:#aaa;font-size:10px}.footer{text-align:center;color:#aaa;font-size:10px;padding:20px;line-height:1.5}
+</style></head><body><div class="app"><header><h1>● 실시간 ±3% 알림</h1><div class="sub">전일 종가 대비 +3% / -3% 돌파 종목을 표시합니다.</div></header><div id="status" class="status">데이터 불러오는 중…</div>
+<section class="summary"><div class="box"><span>감시 종목</span><b id="total">13</b></div><div class="box"><span>상승 경고</span><b id="up" class="red">0</b></div><div class="box"><span>하락 경고</span><b id="down" class="blue">0</b></div></section>
+<main id="list"></main><div id="time" class="time"></div><div class="footer">서버가 주가 데이터를 갱신하고 이 화면은 최신 데이터를 표시합니다.<br>무료 데이터 특성상 지연될 수 있습니다.</div></div>
+<script>
+const threshold=3;
+function money(v,c){if(!Number.isFinite(v))return"-";return c==="KRW"?Math.round(v).toLocaleString()+"원":"$"+v.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}
+async function load(){
+ try{
+  const r=await fetch("data.json?"+Date.now(),{cache:"no-store"}); if(!r.ok)throw Error("data.json "+r.status);
+  const x=await r.json(); let up=0,down=0;
+  document.getElementById("list").innerHTML=x.stocks.map(s=>{
+   const p=s.percent,hu=p>=threshold,hd=p<=-threshold;if(hu)up++;if(hd)down++;
+   return `<div class="row ${hu?"up":hd?"down":""}"><div><div class="name">${s.name}</div><div class="sym">${s.symbol} · ${s.market}</div><span class="badge ${hu?"r":hd?"b":""}">${hu?"▲ +3% 이상":hd?"▼ -3% 이하":"정상 범위"}</span></div><div><div class="price">${money(s.price,s.currency)}</div><div class="change ${hu?"red":hd?"blue":""}">${p>=0?"+":""}${p.toFixed(2)}%</div><div class="prev">전일 ${money(s.prev,s.currency)}</div></div></div>`;
+  }).join("");
+  document.getElementById("up").textContent=up;document.getElementById("down").textContent=down;
+  document.getElementById("status").textContent="✓ 최신 데이터 확인 완료";
+  document.getElementById("time").textContent="데이터 갱신: "+new Date(x.updatedAt).toLocaleString("ko-KR");
+ }catch(e){document.getElementById("status").className="status bad";document.getElementById("status").textContent="⚠ 데이터 갱신 실패: "+e.message}
+}
+load();setInterval(load,60000);
+</script></body></html>

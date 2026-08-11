@@ -1,0 +1,18 @@
+{
+  "updatedAt": "2026-01-01T00:00:00Z",
+  "stocks": [
+    {"name":"삼성전자","symbol":"005930.KS","market":"국내","currency":"KRW","price":0,"prev":0,"percent":0},
+    {"name":"애플","symbol":"AAPL","market":"미국","currency":"USD","price":0,"prev":0,"percent":0},
+    {"name":"브로드컴","symbol":"AVGO","market":"미국","currency":"USD","price":0,"prev":0,"percent":0},
+    {"name":"애브비","symbol":"ABBV","market":"미국","currency":"USD","price":0,"prev":0,"percent":0},
+    {"name":"아마존","symbol":"AMZN","market":"미국","currency":"USD","price":0,"prev":0,"percent":0},
+    {"name":"버크셔 해서웨이 B","symbol":"BRK-B","market":"미국","currency":"USD","price":0,"prev":0,"percent":0},
+    {"name":"알파벳 C","symbol":"GOOG","market":"미국","currency":"USD","price":0,"prev":0,"percent":0},
+    {"name":"알파벳 A","symbol":"GOOGL","market":"미국","currency":"USD","price":0,"prev":0,"percent":0},
+    {"name":"일라이 릴리","symbol":"LLY","market":"미국","currency":"USD","price":0,"prev":0,"percent":0},
+    {"name":"마이크로소프트","symbol":"MSFT","market":"미국","currency":"USD","price":0,"prev":0,"percent":0},
+    {"name":"넷플릭스","symbol":"NFLX","market":"미국","currency":"USD","price":0,"prev":0,"percent":0},
+    {"name":"TSMC ADR","symbol":"TSM","market":"미국","currency":"USD","price":0,"prev":0,"percent":0},
+    {"name":"엔비디아","symbol":"NVDA","market":"미국","currency":"USD","price":0,"prev":0,"percent":0}
+  ]
+}
