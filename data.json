@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T16:06:29.558825+00:00",
+  "updatedAt": "2026-08-24T17:51:04.101458+00:00",
   "stocks": [
     {
       "name": "삼성전자",
@@ -15,108 +15,108 @@
       "symbol": "AAPL",
       "market": "미국",
       "currency": "USD",
-      "price": 311.59,
+      "price": 312.18,
       "prev": 311.3,
-      "percent": 0.09315772566653724
+      "percent": 0.2826855123674976
     },
     {
       "name": "브로드컴",
       "symbol": "AVGO",
       "market": "미국",
       "currency": "USD",
-      "price": 361.83,
+      "price": 361.07,
       "prev": 364.03,
-      "percent": -0.6043457956761755
+      "percent": -0.8131197978188509
     },
     {
       "name": "애브비",
       "symbol": "ABBV",
       "market": "미국",
       "currency": "USD",
-      "price": 264.885,
+      "price": 265.62,
       "prev": 261.83,
-      "percent": 1.1667876102814834
+      "percent": 1.4475041057174565
     },
     {
       "name": "아마존",
       "symbol": "AMZN",
       "market": "미국",
       "currency": "USD",
-      "price": 263.195,
+      "price": 262.215,
       "prev": 260.11,
-      "percent": 1.1860366767905806
+      "percent": 0.8092729998846471
     },
     {
       "name": "버크셔 해서웨이 B",
       "symbol": "BRK-B",
       "market": "미국",
       "currency": "USD",
-      "price": 501.83,
+      "price": 501.76,
       "prev": 496.86,
-      "percent": 1.0002817695125232
+      "percent": 0.9861932938856066
     },
     {
       "name": "알파벳 C",
       "symbol": "GOOG",
       "market": "미국",
       "currency": "USD",
-      "price": 347.38,
+      "price": 345.52,
       "prev": 338.2,
-      "percent": 2.714370195150795
+      "percent": 2.1643997634535728
     },
     {
       "name": "알파벳 A",
       "symbol": "GOOGL",
       "market": "미국",
       "currency": "USD",
-      "price": 350.82,
+      "price": 349.005,
       "prev": 340.67,
-      "percent": 2.979422901928541
+      "percent": 2.4466492500073267
     },
     {
       "name": "일라이 릴리",
       "symbol": "LLY",
       "market": "미국",
       "currency": "USD",
-      "price": 1243.84,
+      "price": 1246.31,
       "prev": 1244.4,
-      "percent": -0.04500160720026791
+      "percent": 0.1534876245580019
     },
     {
       "name": "마이크로소프트",
       "symbol": "MSFT",
       "market": "미국",
       "currency": "USD",
-      "price": 489.425,
+      "price": 488.18,
       "prev": 481.15,
-      "percent": 1.719837888392406
+      "percent": 1.461082822404669
     },
     {
       "name": "넷플릭스",
       "symbol": "NFLX",
       "market": "미국",
       "currency": "USD",
-      "price": 80.117,
+      "price": 80.57,
       "prev": 80.14,
-      "percent": -0.028699775393059568
+      "percent": 0.5365610182181069
     },
     {
       "name": "TSMC ADR",
       "symbol": "TSM",
       "market": "미국",
       "currency": "USD",
-      "price": 409.575,
+      "price": 408.35,
       "prev": 416.0,
-      "percent": -1.5444711538461608
+      "percent": -1.838942307692304
     },
     {
       "name": "엔비디아",
       "symbol": "NVDA",
       "market": "미국",
       "currency": "USD",
-      "price": 210.145,
+      "price": 209.65,
       "prev": 216.85,
-      "percent": -3.091999077703478
+      "percent": -3.320267465990312
     }
   ]
 }
