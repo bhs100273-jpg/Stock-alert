@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T20:04:33.122540+00:00",
+  "updatedAt": "2026-09-24T23:10:33.619777+00:00",
   "stocks": [
     {
       "name": "삼성전자",
@@ -33,9 +33,9 @@
       "symbol": "ABBV",
       "market": "미국",
       "currency": "USD",
-      "price": 264.9,
+      "price": 265.12,
       "prev": 265.08,
-      "percent": -0.06790402897238756
+      "percent": 0.015089784216093527
     },
     {
       "name": "아마존",
@@ -51,9 +51,9 @@
       "symbol": "BRK-B",
       "market": "미국",
       "currency": "USD",
-      "price": 505.57,
+      "price": 505.18,
       "prev": 507.17,
-      "percent": -0.3154760731115869
+      "percent": -0.39237336593253014
     },
     {
       "name": "알파벳 C",
@@ -78,9 +78,9 @@
       "symbol": "LLY",
       "market": "미국",
       "currency": "USD",
-      "price": 1183.79,
+      "price": 1181.89,
       "prev": 1150.99,
-      "percent": 2.8497206752447823
+      "percent": 2.6846453922275693
     },
     {
       "name": "마이크로소프트",
@@ -105,9 +105,9 @@
       "symbol": "TSM",
       "market": "미국",
       "currency": "USD",
-      "price": 451.05,
+      "price": 451.15,
       "prev": 452.0,
-      "percent": -0.21017699115043476
+      "percent": -0.1880530973451422
     },
     {
       "name": "엔비디아",
